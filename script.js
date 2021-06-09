@@ -59,7 +59,7 @@ function changeColor(id, color) {
 var slideIndex = 0;
 showSlides();
 function showSlides() {
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = document.getElementsByClassName("slide");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }

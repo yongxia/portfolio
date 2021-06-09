@@ -140,12 +140,31 @@ li:hover a {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 4rem;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 6rem;
+}
+
+.projects-grid img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    font-size: 15px;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: var(--main-red);
 }
 
 @media (max-width: 30.625em) {
@@ -157,12 +176,6 @@ li:hover a {
     }
 }
 
-.project {
-    background: var(--main-gray);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
-}
-
 .code {
     color: var(--main-gray);
     transition: color 0.3s ease-out;
@@ -172,90 +185,9 @@ li:hover a {
     color: #ff7f50;
 }
 
-.project-image {
-    height: calc(100% - 6.8rem);
-    width: 100%;
-    object-fit: cover;
-}
-
-
-
 .project-title {
     font-size: 2rem;
     padding: 2rem 0.5rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 2px;
-}
-
-.btn-show-all {
-    font-size: 2rem;
-    background: var(--main-gray);
-    transition: background 0.3s ease-out;
-}
-
-.btn-show-all:hover {
-    background: var(--main-red);
-}
-
-.btn-show-all:hover>i {
-    transform: translateX(2px);
-}
-
-.btn-show-all>i {
-    margin-left: 10px;
-    transform: translateX(0);
-    transition: transform 0.3s ease-out;
-}
-
-div.gallery {
-    border: 1px solid #ccc;
-}
-
-div.gallery:hover {
-    border: 1px solid #777;
-}
-
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .responsive {
-        width: 100%;
-    }
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 #contact-section {
@@ -280,22 +212,10 @@ div.desc {
 /* Slideshow container */
 
 .slideshow-container {
-    max-width: 1000px;
+    width: 100%;
+    height: 100%;
     position: relative;
     margin: auto;
-}
-
-/* Caption text */
-
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-    color: var(--main-red);
 }
 
 /* Fading animation */
