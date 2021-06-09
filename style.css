@@ -74,14 +74,6 @@ a {
     color: inherit;
 }
 
-/*    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-["#eff3ff","#bdd7e7","#6baed6","#2171b5"]
-#eff3ff, #bdd7e7,, #6baed6, #2171b5
-#b2182b,#d6604d,#f4a582,#fddbc7,#d1e5f0,#92c5de,#4393c3,#2166ac]
-
-["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#084594"]
-*/
-
 #canvas {
     width: 150vw;
     height: 150vh;
@@ -138,36 +130,15 @@ li:hover a {
     transition: color .5s ease;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-#welcome-section>p {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 200;
-    font-style: italic;
-    /*color: var(--main-red);*/
-}
-
-/* project section */
-
-#projects {
+#project-section {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: var(--main-blue);
     padding-bottom: 6rem;
 }
 
-#projects>h2 {
+#project-section>h2 {
     max-width: 640px;
     margin: 6rem auto 3rem auto;
     padding: 0 3rem;
@@ -204,15 +175,13 @@ li:hover a {
     color: yellow;
 }
 
-#contact {
+#contact-section {
     width: 100%;
-    background-color: var(--main-gray);
-    text-align: center;
-}
-
-#contact-header {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    height: 100vh;
+    background-color: #123;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #profile-link {
@@ -223,10 +192,4 @@ li:hover a {
 
 .contact-details:hover {
     transform: translateY(0.8rem);
-}
-
-.footer {
-    height: 6rem;
-    background-image: linear-gradient(var(--main-gray), var(--main-blue));
-    /*background-color: var(--main-gray);*/
 }
