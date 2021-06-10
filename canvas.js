@@ -27,9 +27,6 @@
 
     });
 
-    //// ----
-
-
     space.bindMouse().bindTouch().play();
 
 })();

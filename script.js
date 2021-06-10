@@ -60,13 +60,16 @@ var slideIndex = 0;
 showSlides();
 function showSlides() {
     let slides = document.getElementsByClassName("slide");
+    let texts = document.getElementsByClassName("text");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+        texts[i].style.display = "none";
     }
     slideIndex++;
     if (slideIndex >= slides.length) { slideIndex = 0 }
 
     slides[slideIndex].style.display = "block";
+    texts[slideIndex].style.display = "block";
 
     setTimeout(showSlides, 2500);
 }
