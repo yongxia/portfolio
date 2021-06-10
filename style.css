@@ -17,6 +17,30 @@ html {
     scroll-behavior: smooth;
 }
 
+/* 1200px / 16px = 75em */
+
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
 body {
     font-family: "Poppins", sans-serif;
     font-size: 1.8rem;
@@ -34,9 +58,11 @@ h1 {
 }
 
 h2 {
-    font-size: 4.2rem;
+    font-size: 3rem;
+    margin: 8rem 2rem 4rem 2rem;
+    padding-bottom: 2rem;
     border-bottom: 3px solid #ffcc00;
-    margin-bottom: 6rem;
+    text-align: center;
 }
 
 ul {
