@@ -1,40 +1,33 @@
 Pts.namespace(window);
 
-var space = new CanvasSpace("#canvas");
-space.setup({ bgcolor: "#123" });
+var space = new CanvasSpace("#canvas").setup({ bgcolor: "#123" });
+
 var form = space.getForm();
 
-(function () {
-
-    var pts = [];
+var draw = () => {
 
     space.add({
-
         // init with 500 random points 
         start: (bound) => { pts = Create.distributeRandom(space.innerBound, 800); },
 
         animate: (time, ftime) => {
-
             let r = Math.abs(space.pointer.x - space.center.x) / space.center.x * 150 + 70;
             let range = Circle.fromCenter(space.pointer, r);
-            pts.rotate2D(0.0005, space.center);
+            pts.rotate2D(0.001, space.center);
 
             // check if each point is within circle's range
             for (let i = 0, len = pts.length; i < len; i++) {
-                if (Circle.withinBound(range, pts[i])) {
-                    form.fillOnly("#fff").point(pts[i], 1);
-                } else {
-                    form.fillOnly("#fff").point(pts[i], 0.5);
-                }
-
+                //if (Circle.withinBound(range, pts[i])) {
+                //form.fillOnly("#fff").point(pts[i], 1);
+                // } else {
+                form.fillOnly("#fff").point(pts[i], 0.5);
+                // }
             }
         }
-
     });
 
     space.bindMouse().bindTouch().play();
-
-})();
+}
 
 var names = ["name-y", "name-o", "name-n", "name-g"];
 var colors = ["#ff2d5d", "#42dc8e", "#2e43eb", "#ffe359"];
@@ -78,3 +71,9 @@ window.setInterval(() => {
     let shuffled = shuffle(colors);
     names.forEach((id, index) => changeColor(id, shuffled[index]))
 }, 1000);
+
+draw();
+window.addEventListener("resize", function (e) {
+    //space.clear()
+    //draw();
+});
