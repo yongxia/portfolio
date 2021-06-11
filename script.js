@@ -71,7 +71,7 @@ function showSlides() {
     slides[slideIndex].style.display = "block";
     texts[slideIndex].style.display = "block";
 
-    setTimeout(showSlides, 2500);
+    setTimeout(showSlides, 3000);
 }
 
 window.setInterval(() => {

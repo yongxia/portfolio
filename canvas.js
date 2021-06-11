@@ -13,7 +13,7 @@
 
             let r = Math.abs(space.pointer.x - space.center.x) / space.center.x * 150 + 70;
             let range = Circle.fromCenter(space.pointer, r);
-            pts.rotate2D(0.0005, space.center);
+            pts.rotate2D(0.1, space.center);
             // check if each point is within circle's range
             for (let i = 0, len = pts.length; i < len; i++) {
                 if (Circle.withinBound(range, pts[i])) {
